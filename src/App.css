@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content {
+  flex: 1 ;
+}
+
+.App-header {
+  background-color: #222;
+  /* height: 120px; */
+  padding: 20px;
+  color: white;
+}
+.clippy-container {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 80%;
+  position: relative;
+}
+.clippy-tooltip {
+  min-height: 100px;
+  width: 100%;
+  background: rgb(255, 255, 203);
+  border: 1.5px solid black;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.clippy-text {
+  min-height: 40px;
+}
+.clippy-image {
+  height: 100px;
+  float: right;
+}
+.clippy-buttons {
+  /* margin: 8px 10px; */
+}
+.clippy-buttons a {
+  border-radius: 3px;
+  padding: 4px 8px;
+  display: inline-block;
+  width: 55px;
+  border: rgba(23,23,23,0.4) 1px solid;
+  transition: background 0.2s;
+}
+.clippy-buttons a:hover {
+  background-color: rgba(124,124,124,0.3);
+}
+.clippy-buttons a:first-of-type {
+  float: left;
+}
+.clippy-buttons a:last-of-type {
+  float: right;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(34,34,34);
+  color: white;
+}
+.progress-bar {
+  width: 100%;
+  background-color: rgba(124,124,124,0.9);
+  border: 1px solid darkslategrey;
+  height: 40px;
+}
+
+/* 
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */

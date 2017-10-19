@@ -1,0 +1,36 @@
+{
+  "questions": [
+    {
+      "prompt": "Hypothetically, would you let me provide assistance with choosing a new peanut butter?",
+      "text": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "weight": 1
+    },
+    {
+      "prompt": "Hypothetically, would you let me provide assistance with autoscroll, then we could go grab a cup of coffee after?",
+      "text": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "weight": 1
+    },
+    {
+      "prompt": "Hypothetically, would you let me provide assistance with hiding a dead body?",
+      "text": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "weight": 1
+    },
+    {
+      "prompt": "It looks like you're trying to reconsider my legacy. Would you like help?",
+      "text": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "weight": 1
+    }
+  ]
+}
