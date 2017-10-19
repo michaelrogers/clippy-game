@@ -1,12 +1,12 @@
 {
   "responses": {
     "A": {
-      "yes": [ "yes", "sure thing", "no problem, can do"],
-      "no": [ "no", "no thanks", "not really, I’ll pass" ]
+      "yes": [ "yes", "sure thing", "no problem", "can do"],
+      "no": [ "no", "no thanks", "not really", "I'll pass" ]
     },
     "B": {
-      "yes": [ "yeah sure", "um ok, I guess I would"],
-      "no": [ "no way!", "absolutely not, I’ll pass" ]
+      "yes": [ "yeah, sure", "um, ok", "I guess", "I mean, why not?"],
+      "no": [ "no way!", "absolutely not", "not a chance", "hard pass" ]
     }  
   },
   "questions": [
@@ -16,7 +16,7 @@
       "weight": 1
     },
     {
-      "prompt": "save a document",
+      "prompt": "format a spreadsheet",
       "group": "A",
       "weight": 1
     },
@@ -31,17 +31,92 @@
       "weight": 1
     },
     {
+      "prompt": "spell-check a document",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "copy text to your clipboard",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "manage your password keychain",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "insert a hyperlink",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "insert a ClipArt graphic",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "AutoFormat a text document",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "create a bulleted list",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "convert text to a table format",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "create a bulleted list",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "hide the Microsoft Media Browser",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "auto-format the date and time",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "set the margins of a text document",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "convert a .txt file to a rich-text document",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "create a persuasive PowerPoint presentation",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "Excel at life",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "surf the World Wide Web",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "format a floppy disk",
+      "group": "A",
+      "weight": 1
+    },
+    {
       "prompt": "train your dog",
-      "group": "B",
-      "weight": 1
-    },
-    {
-      "prompt": "write a haiku about paperclips",
-      "group": "B",
-      "weight": 1
-    },
-    {
-      "prompt": "cut your hair with really sharp scissors",
       "group": "B",
       "weight": 1
     },
@@ -51,12 +126,107 @@
       "weight": 1
     },
     {
-      "prompt": "learn how to use auto scroll, then go grab a cup of coffee after",
+      "prompt": "select a healthier nut butter option for your daily toast",
       "group": "B",
       "weight": 1
     },
     {
-      "prompt": "work on your glutes at the gym",
+      "prompt": "create a whole-grain, paperclip-shaped pasta",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "learn how to use auto scroll, then go grab coffee after",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "learn how to do paperclip Pilates",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "do paperclip-assisted pull-ups",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "take long walks on the beach of a Windows 98 desktop screen saver",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "train your dog to compose Word documents in Spanish",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "create a comprehensive database of the internet’s cat gifs",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "write a poem about tiny paperclips who become self-aware and end up writing even tinier poems about paperclips",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "hug your important documents tightly so they can never escape, even if they wanted to",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "check out that one abandoned factory nobody wants to go to",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "cut your hair with really, really sharp scissors",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "select the right bowling alley to hang out behind",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "catch a stray raccoon",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "cook canned beans over an open flame...in the can",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "EDIT and SAVE your government-issued credentials",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "ENTER a fortified, highly classified location undetected",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "CTRL + C stacks of U.S. currency",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "ESC from a federally run, highly secure facility",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "hide a body",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "assassinate the Adobe Flash Player plugin",
       "group": "B",
       "weight": 1
     }

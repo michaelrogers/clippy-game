@@ -6,6 +6,8 @@ import questions from './data/questions.json';
 const socket = io.connect('https://saveclippy.herokuapp.com/', {reconnect: true, transports: ['websocket'], path: '/socket.io'});
 // const socket = io.connect('http://localhost:3000');
 
+// import Typed from 'typed.js';
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -98,6 +100,8 @@ export default class App extends Component {
               </div>
             </div>
             <img src={Clippy} className="clippy-image" alt="Clippy" />
+            <br/>
+            <br/>
             <p>{this.state.response}</p>
           </div>
         </div>
