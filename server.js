@@ -25,8 +25,10 @@ const game = { score: 0 };
 // Game Sockets
 
 io.on('connection', socket => {
+  io.emit('game:score', game.score);
+
   console.log('Players Connected:', socket.server.engine.clientsCount);
-  socket.emit('player:count', socket.server.engine.clientsCount);
+  io.emit('player:count', socket.server.engine.clientsCount);
   io.on('disconnect', socket => {
     io.emit('player:count', socket.server.engine.clientsCount);
   });

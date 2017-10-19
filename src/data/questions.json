@@ -1,35 +1,63 @@
 {
+  "responses": {
+    "A": {
+      "yes": [ "yes", "sure thing", "no problem, can do"],
+      "no": [ "no", "no thanks", "not really, I’ll pass" ]
+    },
+    "B": {
+      "yes": [ "yeah sure", "um ok, I guess I would"],
+      "no": [ "no way!", "absolutely not, I’ll pass" ]
+    }  
+  },
   "questions": [
     {
-      "prompt": "Hypothetically, would you let me provide assistance with choosing a new peanut butter?",
-      "text": {
-        "yes": "Yes",
-        "no": "No"
-      },
+      "prompt": "write a letter",
+      "group": "A",
       "weight": 1
     },
     {
-      "prompt": "Hypothetically, would you let me provide assistance with autoscroll, then we could go grab a cup of coffee after?",
-      "text": {
-        "yes": "Yes",
-        "no": "No"
-      },
+      "prompt": "save a document",
+      "group": "A",
       "weight": 1
     },
     {
-      "prompt": "Hypothetically, would you let me provide assistance with hiding a dead body?",
-      "text": {
-        "yes": "Yes",
-        "no": "No"
-      },
+      "prompt": "open a new file",
+      "group": "A",
       "weight": 1
     },
     {
-      "prompt": "It looks like you're trying to reconsider my legacy. Would you like help?",
-      "text": {
-        "yes": "Yes",
-        "no": "No"
-      },
+      "prompt": "print a document",
+      "group": "A",
+      "weight": 1
+    },
+    {
+      "prompt": "train your dog",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "write a haiku about paperclips",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "cut your hair with really sharp scissors",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "pick out a new source of omega 3 fatty acids",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "learn how to use auto scroll, then go grab a cup of coffee after",
+      "group": "B",
+      "weight": 1
+    },
+    {
+      "prompt": "work on your glutes at the gym",
+      "group": "B",
       "weight": 1
     }
   ]

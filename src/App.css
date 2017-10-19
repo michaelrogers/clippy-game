@@ -45,7 +45,8 @@ body {
   border-radius: 3px;
   padding: 4px 8px;
   display: inline-block;
-  width: 55px;
+  min-width: 55px;
+  max-width: 40%;
   border: rgba(23,23,23,0.4) 1px solid;
   transition: background 0.2s;
 }

@@ -3,15 +3,17 @@ import Clippy from './images/Clippy.png';
 import './App.css';
 import io from 'socket.io-client';
 import questions from './data/questions.json';
-const socket = io.connect('https://saveclippy.herokuapp.com/', {reconnect: true, transports: ['websocket'], path: '/socket.io'});
-// const socket = io.connect('/');
+// const socket = io.connect('https://saveclippy.herokuapp.com/', {reconnect: true, transports: ['websocket'], path: '/socket.io'});
+const socket = io.connect('http://localhost:3000');
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      responses: questions.responses,
       questions: questions.questions || [],
       currentQuestion: {},
+      currentResponses: {},
       playerCount: 0,
       gameScore: 0
     };
@@ -21,13 +23,26 @@ export default class App extends Component {
     this.evaluateAnswer = this.evaluateAnswer.bind(this);
   }
   fetchNewQuestion() {
-    this.setState({currentQuestion: (
-      this.state.questions[
-        Math.floor(
-          Math.random() *this.state.questions.length
-        )
-      ]
-    )
+    const nextQuestion = this.state.questions[
+      Math.floor(
+        Math.random() * this.state.questions.length
+      )
+    ];
+    const nextGroup = nextQuestion.group;
+    const possibleResponses = this.state.responses[nextGroup];
+    const responses = {
+      yes: possibleResponses.yes[Math.floor(
+        Math.random() * possibleResponses.yes.length
+      )],
+      no: possibleResponses.no[Math.floor(
+        Math.random() * possibleResponses.no.length
+      )]
+    };
+
+
+    this.setState({
+      currentQuestion: nextQuestion,
+      currentResponses: responses
     });
   }
   setPlayerCount(count) {
@@ -41,6 +56,12 @@ export default class App extends Component {
       answer: input,
       weight: this.state.currentQuestion.weight
     });
+    this.setState({response: (
+      input ?
+        '+1 Thank you. This makes me happy.':
+        '-1 Really? So it’s true...people don’t need me after all.'
+    ) 
+    });
     this.fetchNewQuestion();
   }
   componentWillMount() {
@@ -53,7 +74,6 @@ export default class App extends Component {
   componentDidMount() {
     socket.on('player:count', this.setPlayerCount);
     socket.on('game:score', this.setGameScore);
-
   }
 
 
@@ -70,22 +90,23 @@ export default class App extends Component {
           <div className="clippy-container clearfix">
             <div className="clippy-tooltip">
               <div className="clippy-text">
-                <p>{this.state.currentQuestion.prompt}</p>
+                <p>Hypothetically, would you let ME help YOU {this.state.currentQuestion.prompt}?</p>
               </div>
               <div className="clippy-buttons clearfix">
-                <a className="" onClick={() => this.evaluateAnswer(true) }>{this.state.currentQuestion.text.yes}</a>
-                <a className="" onClick={() => this.evaluateAnswer(false) }>{this.state.currentQuestion.text.no}</a>
+                <a className="" onClick={() => this.evaluateAnswer(true) }>{this.state.currentResponses.yes}</a>
+                <a className="" onClick={() => this.evaluateAnswer(false) }>{this.state.currentResponses.no}</a>
               </div>
             </div>
             <img src={Clippy} className="clippy-image" alt="Clippy" />
+            <p>{this.state.response}</p>
           </div>
         </div>
         <div className="fixed-footer">
           <p>Current Players: {this.state.playerCount}</p>
-          <p>Game Score: {this.state.gameScore}</p>
-          <div className="progress-bar">
+          <p>Game Score: {this.state.gameScore} / 50</p>
+          {/* <div className="progress-bar">
 
-          </div>
+          </div> */}
         </div>
 
 
