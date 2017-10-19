@@ -3,12 +3,15 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 const server = require('http').Server(app);
+server.listen(port, () => console.log(`App listening on port ${port}!`));
+
+
 const io = require('socket.io')(server);
 
 // app.use(express.static('./public'));
 app.use(express.static('./build'));
-const port = process.env.PORT || 80;
 
 
 app.get('/', function (req, res) {
@@ -45,4 +48,3 @@ io.on('connection', socket => {
   });
   
 });
-server.listen(port, () => console.log(`App listening on port ${port}!`));
