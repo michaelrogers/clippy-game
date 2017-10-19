@@ -3,8 +3,8 @@ import Clippy from './images/Clippy.png';
 import './App.css';
 import io from 'socket.io-client';
 import questions from './data/questions.json';
-// const socket = io.connect('http://localhost:3000');
-const socket = io.connect('https://saveclippy.herokuapp.com/');
+const socket = io.connect();
+// const socket = io.connect('/');
 
 export default class App extends Component {
   constructor(props) {
@@ -21,13 +21,14 @@ export default class App extends Component {
     this.evaluateAnswer = this.evaluateAnswer.bind(this);
   }
   fetchNewQuestion() {
-    this.state.currentQuestion = (
+    this.setState({currentQuestion: (
       this.state.questions[
         Math.floor(
           Math.random() *this.state.questions.length
         )
       ]
-    );
+    )
+    });
   }
   setPlayerCount(count) {
     this.setState({playerCount: count});

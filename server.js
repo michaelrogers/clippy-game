@@ -8,7 +8,7 @@ const io = require('socket.io')(server);
 
 // app.use(express.static('./public'));
 app.use(express.static('./build'));
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 
 
 app.get('/', function (req, res) {
