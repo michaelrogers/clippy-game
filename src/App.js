@@ -3,7 +3,8 @@ import Clippy from './images/Clippy.png';
 import './App.css';
 import io from 'socket.io-client';
 import questions from './data/questions.json';
-const socket = io.connect('http://localhost:3000');
+// const socket = io.connect('http://localhost:3000');
+const socket = io.connect('https://saveclippy.herokuapp.com/');
 
 export default class App extends Component {
   constructor(props) {
