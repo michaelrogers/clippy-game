@@ -8,6 +8,7 @@ body {
 }
 .content {
   flex: 1 ;
+  min-height: 250px;
 }
 
 .App-header {
@@ -20,7 +21,10 @@ body {
   margin: 0 auto;
   max-width: 500px;
   width: 80%;
-  position: relative;
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  right: 0;
 }
 .clippy-tooltip {
   min-height: 100px;
@@ -46,9 +50,9 @@ body {
   padding: 4px 8px;
   display: inline-block;
   min-width: 55px;
-  max-width: 40%;
+  max-width: 44%;
   border: rgba(23,23,23,0.4) 1px solid;
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 .clippy-buttons a:hover {
   background-color: rgba(124,124,124,0.3);
@@ -61,6 +65,8 @@ body {
 }
 .App-title {
   font-size: 1.5em;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .App-intro {
@@ -88,7 +94,29 @@ body {
   border: 1px solid darkslategrey;
   height: 40px;
 }
-
+.score-value {
+  font-size: 2em;
+  display: block;
+  margin-top: 5px;
+}
+.score-label {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  color: rgb(255, 255, 202);
+}
+.col-half {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+.header-subtitle {
+  /* color: rgb(255, 255, 202); */
+}
+.subtitle-block {
+  padding: 10px 8px;
+}
 /* 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

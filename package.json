@@ -6,7 +6,9 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14",
-    "socket.io": "^2.0.3"
+    "react-typing-animation": "^1.1.5",
+    "socket.io": "^2.0.3",
+    "typed.js": "^2.0.6"
   },
   "scripts": {
     "start": "node server.js",
@@ -15,7 +17,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": "react-scripts build"
-    
   },
   "devDependencies": {
     "eslint": "^4.9.0",

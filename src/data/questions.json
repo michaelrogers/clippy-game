@@ -1,12 +1,12 @@
 {
   "responses": {
     "A": {
-      "yes": [ "yes", "sure thing", "no problem", "can do"],
-      "no": [ "no", "no thanks", "not really", "I'll pass" ]
+      "yes": [ "Yes", "Sure thing", "No problem", "Can do"],
+      "no": [ "No", "No thanks", "Not really", "I'll pass" ]
     },
     "B": {
-      "yes": [ "yeah, sure", "um, ok", "I guess", "I mean, why not?"],
-      "no": [ "no way!", "absolutely not", "not a chance", "hard pass" ]
+      "yes": [ "Yeah, sure", "Um, ok", "I guess", "I mean, why not?"],
+      "no": [ "No way!", "Absolutely not", "Not a chance", "Hard pass" ]
     }  
   },
   "questions": [
