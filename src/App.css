@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-}
-body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+body {
 }
 .content {
   flex: 1 ;
@@ -21,10 +21,12 @@ body {
   margin: 0 auto;
   max-width: 500px;
   width: 80%;
-  position: absolute;
+  position: relative;
+
+  /* position: absolute;
   bottom: 120px;
   left: 0;
-  right: 0;
+  right: 0; */
 }
 .clippy-tooltip {
   min-height: 100px;
@@ -116,6 +118,10 @@ body {
 }
 .subtitle-block {
   padding: 10px 8px;
+}
+.subtitle-block p {
+  margin-top: 0;
+  margin-bottom: 6px;
 }
 /* 
 @keyframes App-logo-spin {
