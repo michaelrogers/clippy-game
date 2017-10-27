@@ -1,14 +1,24 @@
+
+
 .App {
   text-align: center;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+html { 
+height: 100%;
+overflow-y: hidden;
+-webkit-overflow-scrolling: touch;
+}
 body {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
 }
 .content {
   flex: 1 ;
-  min-height: 250px;
+  /* min-height: 250px; */
 }
 
 .App-header {
@@ -19,15 +29,39 @@ body {
 }
 .clippy-container {
   margin: 0 auto;
-  max-width: 500px;
-  width: 80%;
-  position: relative;
+	max-width: 500px;
+	width: 80%;
+	position: relative;
+	/* position: absolute; */
+  /* top: 0; */
+	left: 0;
+  right: 0;
+  bottom: 50%;
+  /* top: 0; */
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
 
   /* position: absolute;
   bottom: 120px;
   left: 0;
   right: 0; */
 }
+.clippy-container + div {
+  bottom: 80px !important;
+  padding: 20px;
+}
+.MuiSnackbar-anchorTopCenter-2 div {
+  padding: 0px 2px;
+  display: block;
+  line-height: 1;
+  text-align: center;
+}
+
+.MuiPaper-root-37 {
+  /* padding: 20px;
+  margin: 0 20px; */
+}
+
 .clippy-tooltip {
   min-height: 100px;
   width: 100%;
@@ -39,6 +73,8 @@ body {
 }
 .clippy-text {
   min-height: 40px;
+  color: black;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 .clippy-image {
   height: 100px;
@@ -48,16 +84,19 @@ body {
   /* margin: 8px 10px; */
 }
 .clippy-buttons a {
+  font-family: Tahoma, Geneva, sans-serif;
+  
   border-radius: 3px;
   padding: 4px 8px;
   display: inline-block;
   min-width: 55px;
-  max-width: 44%;
+  max-width: 46%;
   border: rgba(23,23,23,0.4) 1px solid;
   transition: background-color 0.2s;
+  color: black;
 }
-.clippy-buttons a:hover {
-  background-color: rgba(124,124,124,0.3);
+.clippy-buttons a:active {
+  /* background-color: rgba(124,124,124,0.3); */
 }
 .clippy-buttons a:first-of-type {
   float: left;
@@ -89,6 +128,7 @@ body {
   right: 0;
   background: rgb(34,34,34);
   color: white;
+  
 }
 .progress-bar {
   width: 100%;
@@ -100,6 +140,7 @@ body {
   font-size: 2em;
   display: block;
   margin-top: 5px;
+  line-height: 1;
 }
 .score-label {
   font-weight: 300;
@@ -128,3 +169,8 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 } */
+@media (min-width: 600px) {
+  body {
+    display: none;
+  }
+}

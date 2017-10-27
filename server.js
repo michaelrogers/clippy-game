@@ -35,7 +35,6 @@ io.on('connection', socket => {
   
   socket.on('game:action', data => {
     //Handle input from clients about score updates
-    console.log(data)
     if (data.answer) {
       game.score += data.weight;
     } else {
@@ -45,6 +44,9 @@ io.on('connection', socket => {
       } else {
         game.score = 0;
       }
+    }
+    if (game.score >= maxScore) {
+      game.score = 0;
     }
     io.emit('game:score', game.score);
   });

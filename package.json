@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "install": "^0.10.1",
+    "material-ui": "next",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-mdl": "^1.10.3",
     "react-scripts": "1.0.14",
-    "react-typing-animation": "^1.1.5",
-    "socket.io": "^2.0.3",
-    "typed.js": "^2.0.6"
+    "socket.io": "^2.0.3"
   },
   "scripts": {
     "start": "node server.js",
