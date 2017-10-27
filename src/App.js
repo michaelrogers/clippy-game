@@ -196,7 +196,7 @@ export default class App extends Component {
           </Dialog>
           <Snackbar
             anchorOrigin={{
-              vertical: 'bottom',
+              vertical: 'top',
               horizontal: 'center',
             }}
             open={this.state.isSnackbarActive}

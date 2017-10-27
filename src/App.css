@@ -47,7 +47,7 @@ body {
   right: 0; */
 }
 .clippy-container + div {
-  bottom: 80px !important;
+  top: 80px !important;
   padding: 20px;
 }
 .MuiSnackbar-anchorTopCenter-2 div {
